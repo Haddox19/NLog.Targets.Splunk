@@ -30,7 +30,10 @@ Then configure the SplunkHttpEventCollector with `ServerUrl` and `Token`:
             includeMdlc="false"
             includePositionalParameters="false"
 	    MaxConnectionsPerServer="10"
-	    IgnoreSslErrors="false">
+	    IgnoreSslErrors="false"
+	    source="my_source"
+      	    sourcetype="my_source_type"
+	    index="my_index">
 		<contextproperty name="host" layout="${machinename}" />
 		<contextproperty name="threadid" layout="${threadid}" />
 		<contextproperty name="logger" layout="${logger}" />
